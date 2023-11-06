@@ -9,4 +9,4 @@ Spend less time formatting the perfect commit message, and more time writing cod
 ## System Dependencies
 
 - git
-- ollama
+- ollama (with orca-mini installed)
