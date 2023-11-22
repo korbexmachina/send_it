@@ -8,8 +8,8 @@ use {
 };
 
 fn main() {
-    let prompt = "Generate a commit message based on the provided git diff. The generated text will be used directly as the commit message, so please provide a concise and informative message that exclusively focuses on summarizing the changes. Use a format like 'Fix: [Description]', 'Feature: [Description]', or 'Refactor: [Description]' to describe the purpose of the changes. The commit message should contain no extraneous punctuation, discussion, or preamble—just a direct and clear summary of the modifications. You may use bullet points or relevant details from the diff to create the commit message.".to_string();
-    let model = "orca-mini".to_string();
+    let prompt = "Summarize the changes outlined in this file:".to_string();
+    let model = "llama2".to_string();
     let diff = get_diff();
     let commit_message = get_commit_message(prompt, model, diff);
     println!("{}", commit_message);
